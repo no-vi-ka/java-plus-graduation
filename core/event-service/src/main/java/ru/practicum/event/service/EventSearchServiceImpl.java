@@ -22,7 +22,6 @@ public class EventSearchServiceImpl implements EventSearchService {
     private final EventService eventService;
     private final EventRepository eventRepository;
 
-    @Transactional
     @Override
     public List<EventShortDto> searchMostLikedEvents(EventSearchByRatingParam eventSearchByRatingParam) {
         List<Long> eventsIds = ratingClient.getMostLikedEventIds(eventSearchByRatingParam);
