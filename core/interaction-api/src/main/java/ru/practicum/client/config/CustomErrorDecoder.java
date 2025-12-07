@@ -12,7 +12,11 @@ import java.nio.charset.StandardCharsets;
 
 public class CustomErrorDecoder implements ErrorDecoder {
 
-    private final ObjectMapper objectMapper = new ObjectMapper();
+    private final ObjectMapper objectMapper;
+
+    public CustomErrorDecoder() {
+        objectMapper = new ObjectMapper();
+    }
 
     @Override
     public Exception decode(String methodKey, Response response) {
