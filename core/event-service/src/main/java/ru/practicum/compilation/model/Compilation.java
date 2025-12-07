@@ -24,7 +24,7 @@ public class Compilation {
             schema = "core_events",
             joinColumns = @JoinColumn(name = "compilation_id"),
             inverseJoinColumns = @JoinColumn(name = "event_id"))
-    private Set<Event> events;
+    private List<Event> events;
     @Column(name = "is_pinned")
     private Boolean pinned;
     @Column(name = "title")
