@@ -6,6 +6,7 @@ import lombok.experimental.FieldDefaults;
 import ru.practicum.event.model.Event;
 
 import java.util.List;
+import java.util.Set;
 
 @Entity
 @Getter
@@ -23,7 +24,7 @@ public class Compilation {
             schema = "core_events",
             joinColumns = @JoinColumn(name = "compilation_id"),
             inverseJoinColumns = @JoinColumn(name = "event_id"))
-    private List<Event> events;
+    private Set<Event> events;
     @Column(name = "is_pinned")
     private Boolean pinned;
     @Column(name = "title")
