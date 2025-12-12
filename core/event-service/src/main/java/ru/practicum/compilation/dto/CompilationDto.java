@@ -5,7 +5,6 @@ import lombok.experimental.FieldDefaults;
 import ru.practicum.event.dto.EventShortDto;
 
 import java.util.List;
-import java.util.Set;
 
 @Getter
 @Setter

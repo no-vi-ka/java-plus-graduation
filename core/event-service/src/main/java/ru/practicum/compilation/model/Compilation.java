@@ -6,7 +6,6 @@ import lombok.experimental.FieldDefaults;
 import ru.practicum.event.model.Event;
 
 import java.util.List;
-import java.util.Set;
 
 @Entity
 @Getter
