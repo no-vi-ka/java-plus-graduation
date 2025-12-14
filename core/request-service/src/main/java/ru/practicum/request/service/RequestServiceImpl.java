@@ -34,6 +34,7 @@ public class RequestServiceImpl implements RequestService {
     private final CollectorGrpcClient collectorGrpcClient;
 
     @Override
+    @Transactional
     public ParticipationRequestDto createParticipationRequest(long userId, long eventId) {
 
         if (requestRepository.existsByEventIdAndRequesterId(eventId, userId)) {

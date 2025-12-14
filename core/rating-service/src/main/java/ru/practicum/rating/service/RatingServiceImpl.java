@@ -36,6 +36,7 @@ public class RatingServiceImpl implements RatingService {
     }
 
     @Override
+    @Transactional
     public RatingDto create(long userId, long eventId, NewRatingDto newRatingDto) {
         boolean exists = ratingRepository.existsByUserIdAndEventId(userId, eventId);
         if (exists) {
